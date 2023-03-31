@@ -1,3 +1,8 @@
+/* Google font  */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+body{
+  font-family: 'Exo 2', sans-serif;
+}
 #root {
   max-width: 1120px;
   margin: 0 auto;
@@ -22,3 +27,4 @@
 .read-the-docs {
   color: #888;
 }
+

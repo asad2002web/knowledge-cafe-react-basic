@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "author": "Mr. Raju",
+        "title": "How to get your first job as a self-taught programmer",
+        "image": "https://i.ibb.co/w0BRb7S/01.png",
+        "author_img": "https://i.ibb.co/tzYLS6Y/author-01.png",
+        "read_time": "05",    
+        "publish_date": "Mar 14 (4 Days ago)",
+        "hastag_first": "#beginners",
+        "hastag_second": "#programming"
+
+    },
+    {
+        "id": 2,
+        "author": "Alicia M.",
+        "title": "How to get your first job as a self-taught programmer",
+        "image": "https://i.ibb.co/8c5BKpJ/02.png",
+        "author_img": "https://i.ibb.co/xsVjPHs/author-02.png",
+        "read_time": "10",    
+        "publish_date": "Agu 14 (24 Days ago)"
+    },
+    {
+        "id": 3,
+        "author": "Jeannie T.",
+        "title": "How to get your first job as a self-taught programmer",
+        "image": "https://i.ibb.co/gvy7wQ4/03.png",
+        "author_img": "https://i.ibb.co/wg7Nq2V/author-03.png",
+        "read_time": "08",    
+        "publish_date": "Dec 18 (53 Days ago)"
+    },
+    {
+        "id": 4,
+        "author": "Lathem",
+        "title": "How to get your first job as a self-taught programmer",
+        "image": "https://i.ibb.co/fX2LvDG/04.png",
+        "author_img": "https://i.ibb.co/ryqmWYn/author-04.png",
+        "read_time": "13",    
+        "publish_date": "Jan 8 (20 Days ago)"
+    }
+]
