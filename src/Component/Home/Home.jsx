@@ -30,7 +30,7 @@ export const Home = () => {
 //   Set bookmark 
 const [bookmarks,setBookmarks] =useState([])
 const handleBookmark =(bookmark) =>{
-    const ide = bookmark.id;
+    const blogId = bookmark.id;
     const addToLocalStorage = (id)=>{
       const quiantity = localStorage.getItem(id);
       if(quiantity){
@@ -41,7 +41,7 @@ const handleBookmark =(bookmark) =>{
         localStorage.setItem(id,bookmark.title)
       }     
     }
-    addToLocalStorage(ide)
+    addToLocalStorage(blogId)
 }
 
   return (
@@ -59,6 +59,7 @@ const handleBookmark =(bookmark) =>{
         <div className="blog-sidebar col-md-4">
           <SideBar
           readTime={readTime}
+          bookmarks={bookmarks}
           ></SideBar>
         </div>
       </div>
