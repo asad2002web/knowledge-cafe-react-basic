@@ -11,6 +11,10 @@ export const Home = () => {
         .then(res => res.json())
         .then(data => setBlogs(data))
     } ,[])
+
+    const handleReadTime =(readTime)=>{
+        console.log(readTime)
+    };
     
   return (
     <div>
@@ -19,6 +23,7 @@ export const Home = () => {
         {blogs.map((blog) => (
             <SingleCard
             blog={blog}
+            handleReadTime={handleReadTime}
             ></SingleCard>
         ))}
         </div>
