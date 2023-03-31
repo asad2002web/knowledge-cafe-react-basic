@@ -1,0 +1,17 @@
+.time-spent {
+  background: rgba(96, 71, 236, 0.1);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.time-spent h5 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #6047ec;
+}
+
+.blog-bookmark{
+    background: rgba(17, 17, 17, 0.05);
+}

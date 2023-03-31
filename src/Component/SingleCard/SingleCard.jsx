@@ -2,7 +2,7 @@ import React from "react";
 import "./SingleCard.css";
 
 const SingleCard = ({ blog, handleReadTime }) => {
-  const {hash_tag, author, title, image, author_img, publish_date, read_time,hastag_first, hastag_second } = blog;
+  const {author, title, image, author_img, publish_date, read_time,hastag_first, hastag_second } = blog;
   return (
     <div>
       <div class="card mb-3">
