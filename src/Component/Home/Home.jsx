@@ -14,7 +14,7 @@ export const Home = () => {
 
   const [readTime, setReadTime] = useState(0);
 //   console.log(readTime)
-  const handleReadTime = (time) => {
+  const handleReadTime = (time) =>{
     const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
     if (previousReadTime) {
       const sum = previousReadTime + time;
@@ -38,7 +38,9 @@ export const Home = () => {
           ))}
         </div>
         <div className="blog-sidebar col-md-4">
-          <SideBar></SideBar>
+          <SideBar
+          readTime={readTime}
+          ></SideBar>
         </div>
       </div>
     </>
