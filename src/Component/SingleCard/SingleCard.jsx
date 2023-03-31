@@ -1,7 +1,7 @@
 import React from "react";
 import "./SingleCard.css";
 
-const SingleCard = ({ blog, handleReadTime }) => {
+const SingleCard = ({ blog, handleReadTime, handleBookmark }) => {
   const {author, title, image, author_img, publish_date, read_time,hastag_first, hastag_second } = blog;
   return (
     <div>
@@ -19,7 +19,7 @@ const SingleCard = ({ blog, handleReadTime }) => {
               </div>
             </div>
             <div className="read-time">
-              <p>{read_time} min read  <span className="bookmark">
+              <p>{read_time} min read  <span onClick={()=>handleBookmark(blog)} className="bookmark">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
