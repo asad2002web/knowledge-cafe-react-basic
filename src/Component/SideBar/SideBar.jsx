@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SideBar.css";
 
 const SideBar = ({ readTime, bookmarks }) => {
-    console.log(bookmarks)
+    // console.log(bookmarks)
   // 
   const [time, setTime] = useState(readTime);
 

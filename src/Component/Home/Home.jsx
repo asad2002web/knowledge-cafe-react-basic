@@ -14,7 +14,7 @@ export const Home = () => {
       .then((data) => setBlogs(data));
   }, []);
 // set spent time
-  const [readTime, setReadTime] = useState("");
+  const [readTime, setReadTime] = useState(0);
   const handleReadTime = (time) =>{
     const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
     if (previousReadTime) {
