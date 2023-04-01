@@ -15,9 +15,9 @@ export const Home = () => {
   // set spent time
   const [times, setTimes] = useState("");
   const handleReadTime = (time) => {
-    const previusWatch = JSON.parse(localStorage.getItem("WatchTime"));
-    if (previusWatch) {
-      const sum = previusWatch + parseFloat(time);
+    const previusTime = JSON.parse(localStorage.getItem("WatchTime"));
+    if (previusTime) {
+      const sum = previusTime + parseFloat(time);
       localStorage.setItem("WatchTime", sum);
       setTimes(sum);
     } else {
@@ -43,6 +43,7 @@ export const Home = () => {
         <div className="blog-container col-md-8">
           {blogs.map((blog) => (
             <SingleCard
+            key={blog.id}
               blog={blog}
               handleReadTime={handleReadTime}
               handleBookmark={handleBookmark}

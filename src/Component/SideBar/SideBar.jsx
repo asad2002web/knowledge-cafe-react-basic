@@ -21,7 +21,7 @@ const SideBar = ({ times, bookmarks }) => {
   return (
     <div>
       <div className="time-spent w-full py-3 text-center">
-        <h5>Spent time on read : {time} min</h5>
+        <h5 className="m-0">Spent time on read : {time} min</h5>
       </div>
       <div className="blog-bookmark h-full card my-3 p-3">
         <h5>
