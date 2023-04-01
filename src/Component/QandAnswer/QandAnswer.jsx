@@ -5,6 +5,7 @@ const QandAnswer = () => {
   return (
     <div>
       <div className="QA-Container py-3 px-4">
+        <h2 className="text-center text-warning">Question and Answer part</h2>
         <div className="question card px-3 py-3 my-4">
           <h3>What is defference between props and state ?</h3>
           <p>Props are used to passsed from a perrent component to chiled component.they can not  modify by the chileed component.</p>
