@@ -17,7 +17,10 @@ const QandAnswer = () => {
           <h3>What does useeffect do other than load data ?</h3>
           <p>useEffect use dependency values against the from the last render and its also effect function if any one of them changed.the react useEffect Hook essentially replaces every single lifecycle function that you may run into.</p>
         </div>
-        
+        <div className="question card px-3 py-3 my-4">
+          <h3>How Does Work React ?</h3>
+          <p>React is an opensource, frontend JavaScript library for building user interface,behind the seen react create object and bubbols are compile our code and give syntacting suger to easily read and write.</p>
+        </div>
       </div>
     </div>
   );
