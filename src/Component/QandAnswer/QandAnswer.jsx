@@ -9,6 +9,10 @@ const QandAnswer = () => {
           <h3>What is defference between props and state ?</h3>
           <p>Props are used to passsed from a perrent component to chiled component.they can not  modify by the chileed component.</p>
         </div>
+        <div className="question card px-3 py-3 my-4">
+          <h3>How does work useState?</h3>
+          <p>useState a react hook . its allows you add state functional components. also return a array wwith two values.the hook initial state value as an argument and return update state .when set function called. useState can store any type value premitive data type,and complex data type.</p>
+        </div>
         
       </div>
     </div>
