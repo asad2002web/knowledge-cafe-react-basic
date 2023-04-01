@@ -2,47 +2,40 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import SingleCard from "../SingleCard/SingleCard";
 import SideBar from "../SideBar/SideBar";
-import { ToastContainer, toast } from 'react-toastify';
-
+import { ToastContainer, toast } from "react-toastify";
 
 export const Home = () => {
   const [blogs, setBlogs] = useState([]);
-// Data Load from API
+  // Data Load from API
   useEffect(() => {
     fetch("blogDb.json")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
-// set spent time
-  const [readTime, setReadTime] = useState(0);
-  const handleReadTime = (time) =>{
-    const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
-    if (previousReadTime) {
-      const sum = previousReadTime + time;
-      localStorage.setItem("readTime", sum);
-      setReadTime(sum);
+  // set spent time
+  const [times, setTimes] = useState("");
+  const handleReadTime = (time) => {
+    const previusWatch = JSON.parse(localStorage.getItem("WatchTime"));
+    if (previusWatch) {
+      const sum = previusWatch + parseFloat(time);
+      localStorage.setItem("WatchTime", sum);
+      setTimes(sum);
     } else {
-      localStorage.setItem("readTime", time);
-      setReadTime(time);
+      localStorage.setItem("WatchTime", time);
+      setTimes(time);
     }
   };
 
-//   Set bookmark 
-const [bookmarks,setBookmarks] =useState([])
-const handleBookmark =(bookmark) =>{
-    const blogId = bookmark.id;
-    const addToLocalStorage = (id)=>{
-      const quiantity = localStorage.getItem(id);
-      if(quiantity){
-        toast("already exits!")
-      }else{
-        const newBookMark = [...bookmarks ,bookmark]
-        setBookmarks(newBookMark)
-        localStorage.setItem(id,bookmark.title)
-      }     
+  //   Set bookmark
+  const [bookmarks, setBookmarks] = useState([]);
+  const handleBookmark = (bookmark) => {
+    const exixtId = bookmarks.find((mark) => bookmark.id == mark.id);
+    if (exixtId) {
+      return toast("already exits!");
     }
-    addToLocalStorage(blogId)
-}
+    let newBookMark = [...bookmarks, bookmark];
+    setBookmarks(newBookMark);
+  };
 
   return (
     <>
@@ -57,10 +50,7 @@ const handleBookmark =(bookmark) =>{
           ))}
         </div>
         <div className="blog-sidebar col-md-4">
-          <SideBar
-          readTime={readTime}
-          bookmarks={bookmarks}
-          ></SideBar>
+          <SideBar times={times} bookmarks={bookmarks}></SideBar>
         </div>
       </div>
     </>

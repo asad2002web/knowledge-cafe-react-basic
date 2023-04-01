@@ -8,3 +8,13 @@ a {
   margin-left: 8px;
   cursor: pointer;
 }
+.hashtags {
+  margin: 5px 0;
+}
+.hashtags a {
+  color: #111111;
+  opacity: 0.6;
+}
+.cursor-mark-read {
+  cursor: pointer;
+}
